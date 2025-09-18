@@ -1,122 +1,52 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Dark Minimal Search</title>
-  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500&display=swap" rel="stylesheet" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Search Box Form</title>
   <style>
     body {
-      margin: 0;
-      height: 100vh;
-      background: #121212;
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
       display: flex;
       justify-content: center;
       align-items: center;
-      font-family: 'Rajdhani', sans-serif;
-      color: #eee;
-      user-select: none;
+      height: 100vh;
+      margin: 0;
     }
-
-    .container {
-      width: 380px;
-      padding: 40px 30px;
-      background: #1f1f1f;
-      box-shadow:
-        0 0 10px #ff3c78,
-        inset 0 0 30px #ff3c78;
-      border-radius: 4px;
-      text-align: center;
+    .search-container {
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
     }
-
-    h1 {
-      font-size: 2.8rem;
-      font-weight: 700;
-      letter-spacing: 0.15em;
-      margin-bottom: 50px;
-      color: #ff3c78;
-      text-transform: uppercase;
-      user-select: text;
-    }
-
-    form {
-      display: flex;
-      flex-direction: column;
-      gap: 30px;
-    }
-
     input[type="text"] {
-      background: transparent;
-      border: none;
-      border-bottom: 2.5px solid #555;
-      padding: 12px 8px;
-      font-size: 1.2rem;
-      color: #eee;
+      padding: 10px;
+      width: 250px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
       outline: none;
-      transition: border-color 0.3s ease;
-      letter-spacing: 0.05em;
-      font-weight: 500;
     }
-
-    input[type="text"]::placeholder {
-      color: #777;
-      font-style: italic;
-    }
-
-    input[type="text"]:focus {
-      border-bottom-color: #ff3c78;
-      box-shadow: 0 2px 8px #ff3c78aa;
-    }
-
     button {
-      background: #ff3c78;
-      color: #121212;
+      padding: 10px 15px;
+      background-color: #0077b6;
       border: none;
-      font-size: 1.3rem;
-      font-weight: 700;
-      padding: 14px 0;
+      border-radius: 4px;
+      color: white;
       cursor: pointer;
-      letter-spacing: 0.12em;
-      transition: background-color 0.3s ease, box-shadow 0.25s ease;
-      border-radius: 0;
-      box-shadow: 0 4px 8px #ff3c78cc;
+      margin-left: 5px;
     }
-
     button:hover {
-      background: #e2356a;
-      box-shadow: 0 6px 15px #ff3c78ee;
-    }
-
-    @media (max-width: 420px) {
-      .container {
-        width: 90vw;
-        padding: 30px 20px;
-      }
-      h1 {
-        font-size: 2rem;
-        margin-bottom: 40px;
-      }
-      input[type="text"] {
-        font-size: 1rem;
-      }
-      button {
-        font-size: 1.1rem;
-        padding: 12px 0;
-      }
+      background-color: #005f87;
     }
   </style>
 </head>
 <body>
-  <div class="container" role="main">
-    <h1>SEARCH</h1>
-    <form action="https://formsubmit.co/venkateshkarthigeyan2004@gmail.com" method="POST" autocomplete="off">
-      <input type="text" name="search" placeholder="Enter search term..." required />
-      <button type="submit" aria-label="Submit search">GO</button>
-
-      <input type="hidden" name="_captcha" value="false" />
-      <input type="hidden" name="_template" value="box" />
+  <div class="search-container">
+    <form action="https://formsubmit.co/venkateshkarthigeyan2004@gmail.com" method="POST">
+      <input type="text" name="searchQuery" placeholder="Enter your search..." required>
+      <button type="submit">Search</button>
     </form>
   </div>
 </body>
 </html>
-
